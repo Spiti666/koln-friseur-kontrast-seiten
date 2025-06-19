@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,44 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Arial Black', Arial, sans-serif;
   }
+}
+
+/* Retro 2000s animations and effects */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes rainbow {
+  0% { color: #ff0000; }
+  16% { color: #ff8000; }
+  33% { color: #ffff00; }
+  50% { color: #00ff00; }
+  66% { color: #0080ff; }
+  83% { color: #8000ff; }
+  100% { color: #ff0000; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.retro-blink {
+  animation: blink 1s infinite;
+}
+
+.retro-rainbow {
+  animation: rainbow 2s infinite;
+}
+
+.retro-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+.retro-border {
+  border: 4px ridge #ffd700;
+  box-shadow: inset 0 0 10px rgba(255,215,0,0.5);
 }
