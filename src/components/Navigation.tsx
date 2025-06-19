@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
   const navItems = [
@@ -25,6 +26,13 @@ export const Navigation = () => {
             {item.name}
           </button>
         ))}
+        
+        <Link 
+          to="/modern"
+          className="px-6 py-3 font-bold text-lg border-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-white hover:from-blue-500 hover:to-green-500 transform hover:scale-110 transition-all"
+        >
+          🚀 MODERNE VERSION
+        </Link>
       </div>
     </div>
   );
