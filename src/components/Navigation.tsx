@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export const Navigation = () => {
   const navItems = [
@@ -29,9 +30,15 @@ export const Navigation = () => {
         
         <Link 
           to="/modern"
-          className="px-6 py-3 font-bold text-lg border-2 bg-gradient-to-r from-green-500 to-blue-500 text-white border-white hover:from-blue-500 hover:to-green-500 transform hover:scale-110 transition-all"
+          className="relative px-8 py-4 font-black text-xl border-4 bg-gradient-to-r from-green-500 to-blue-500 text-white border-yellow-400 hover:from-blue-500 hover:to-green-500 transform hover:scale-110 transition-all animate-bounce shadow-lg shadow-yellow-400/50"
         >
-          🚀 MODERNE VERSION
+          <div className="flex items-center space-x-2">
+            <span>🚀 MODERNE VERSION</span>
+            <ArrowRight className="w-6 h-6 animate-pulse" />
+          </div>
+          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-ping">
+            NEU!
+          </div>
         </Link>
       </div>
     </div>
